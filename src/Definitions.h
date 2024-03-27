@@ -21,7 +21,8 @@ int RedSendPeriod = 3000;         // Reduced send period [ms] when wind speed is
 volatile bool flag1 = false;      // Flag for data sending (normal speed)
 volatile bool flag2 = false;      // Flag for data sending (reduced speed)
 volatile bool flag3 = false;      // Flag for zero wind speed detection (true = zero)
-
+volatile bool flag4 = false;      // Flag for zero wind speed detection (true = zero)
+ 
 // Pin definitions WiFi 1000 wind sensor (default)
 int ledPin = 2;                   // LED low activ GPIO 2 (D4)
 int INT_PIN1 = 5;                 // Wind speed GPIO 5 (Hall sensor) (D1)

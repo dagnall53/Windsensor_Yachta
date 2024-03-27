@@ -111,7 +111,7 @@ void DebugPrint(int type, IPAddress x){
 }
 
 // Interrupt routine for wind speed and Hall sensor data array saving
-void ICACHE_RAM_ATTR interruptRoutine1() {
+void IRAM_ATTR interruptRoutine1() {
   noInterrupts();
   // Run if not Demo mode
   if (actconf.serverMode != 4){
@@ -151,7 +151,7 @@ void ICACHE_RAM_ATTR interruptRoutine1() {
 }
 
 // Interrupt routine for wind direction
-void ICACHE_RAM_ATTR interruptRoutine2() {
+void IRAM_ATTR interruptRoutine2() {
   noInterrupts();
   // Run if not Demo mode
   if (actconf.serverMode != 4){
@@ -164,7 +164,7 @@ void ICACHE_RAM_ATTR interruptRoutine2() {
 }
 
 // Timer1 hardware interrupt routine for 100us counter
-void ICACHE_RAM_ATTR counter(){
+void IRAM_ATTR counter(){
   noInterrupts();
   if(marker1 == 1){
     counter1 += 1;

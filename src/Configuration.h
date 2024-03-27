@@ -4,7 +4,7 @@
 // Default configuration
 // Types 'byte' und 'word' doesn't work!
 typedef struct {
-  int valid = 11;                           // Number of configuration (Please change when the structure or values are changed)
+  int valid = 12;                           // Number of configuration (Please change when the structure or values are changed)
   int crypt = 0;                            // Activate for critical webside a password query [0 = off|1 = on]
   char password[31] = "12345678";           // Password for critical websides (settings, update and reboot)
   char devname[21] = "Windsensor";          // Device name for web configuration
@@ -29,7 +29,7 @@ typedef struct {
   char instrumentType[8] = "complex";       // Instrument type [simple|complex] simple = Canvas HTML5 , complex = Canvas Steel Series library
   int instrumentSize = 400;                 // Instrument size X * Y [pix] [200|250|300|350|400|450|500|550|600]
   int sensorID = 0;                         // ID of sensor [0...9]
-  char windSensorType[15] = "Yachta 2.0";   // Type of wind sensor [WiFi 1000|Yachta|Yachta 2.0|Jukolein|Ventus]
+  char windSensorType[15] = "WiFi 1000";   // Type of wind sensor [WiFi 1000|Yachta|Yachta 2.0|Jukolein|Ventus]
   int windSensor = 1;                       // Send wind data 0=off 1=on (WIMWV, WIVWR, WIVPW, PWINF) or Serial or JSON
   char windType[2] = "R";                   // Type of wind R=relative, T=true
   int offset = 0;                           // Offset of wind direction [-180°...+180°]
@@ -39,7 +39,7 @@ typedef struct {
   int downWindRange = 50;                   // Down wind area = 180° +/- downWindRange
   float calslope = 1.0;                     // Speed sensor calibration slope, default 1.0
   float caloffset = 0.0;                    // Speed sensor calibration offset, default 0.0
-  char tempSensorType[10] = "DS18B20";      // Type of temperature sensor [Off|DS18B20|BME280]
+  char tempSensorType[10] = "Off";      // Type of temperature sensor [Off|DS18B20|BME280]
   int tempSensor = 1;                       // Send data for temp 0=off 1=on (PWWST)
   char tempUnit[2] = "C";                   // Unit of temperature [C|F]
 } configData;
